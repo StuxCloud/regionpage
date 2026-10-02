@@ -28,7 +28,7 @@ Each Stux.Cloud region (for example [uk.stux.cloud](https://uk.stux.cloud)) has 
 | United Kingdom | `uk` | [https://uk.stux.cloud](https://uk.stux.cloud) | `robo1.servers.uk.stux.cloud`<br>`tiny1.servers.uk.stux.cloud`<br>`web1.servers.uk.stux.cloud` (not monitored) |
 | Europe | `eu` | [https://eu.stux.cloud](https://eu.stux.cloud) | None yet |
 | Spain | `es` | [https://es.stux.cloud](https://es.stux.cloud) | `mixr1.servers.es.stux.cloud` |
-| United States | `us` | [https://us.stux.cloud](https://us.stux.cloud) | `down1.servers.us.stux.cloud` (not monitored) |
+| United States | `us` | [https://us.stux.cloud](https://us.stux.cloud) | `down1.servers.us.stux.cloud` |
 | Canada | `ca` | [https://ca.stux.cloud](https://ca.stux.cloud) | `kitt1.servers.ca.stux.cloud` |
 | Australia | `au` | [https://au.stux.cloud](https://au.stux.cloud) | None yet |
 | Japan | `jp` | [https://jp.stux.cloud](https://jp.stux.cloud) | None yet |
