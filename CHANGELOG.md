@@ -2,6 +2,14 @@
 
 All notable changes to regionpage are documented here.
 
+## v3.0.0
+
+### Changed
+
+- Rebranded from Stux.Cloud's two-tone green to the single teal `#07878e`, which reads at about 4.1:1 on both the dark and light themes. Every green accent, gradient stop, floating-particle shade and site-banner accent is now `#07878e`; the dark and light backgrounds and text shift from green-tinted to teal-tinted (`#031d1e`, `#e6feff`, `#eef2f2`); button hover is a slightly brighter `#0a9ea6`
+- The logo, icon and favicon pick up the new teal Stux.Cloud assets automatically from `global.media.stux.cloud`
+- README links the archived earlier designs: [regionpage-v2](https://github.com/StuxCloud/regionpage-v2) (the two-tone green design)
+
 ## v1.0.1
 
 ### Changed

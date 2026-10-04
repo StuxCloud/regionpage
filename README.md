@@ -84,6 +84,12 @@ This project uses GitHub Pages and can be automatically deployed to your desired
 
 The live version is deployed at [regionpage.stux.cloud](https://regionpage.stux.cloud).
 
+## Previous designs
+
+This repository always holds the current Stux.Cloud design (v3, single teal `#07878e`). Earlier designs are preserved as their own archived repositories:
+
+- [regionpage-v2](https://github.com/StuxCloud/regionpage-v2): the two-tone green design, live at [regionpage-v2.stux.cloud](https://regionpage-v2.stux.cloud/)
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved, and [CHANGELOG.md](CHANGELOG.md) for release history.
