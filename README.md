@@ -23,17 +23,20 @@ Each Stux.Cloud region (for example [uk.stux.cloud](https://uk.stux.cloud)) has 
 ## Regions
 
 <!-- regions:start -->
-| Region | Code | Website | Servers |
-|---|---|---|---|
-| United Kingdom | `uk` | [https://uk.stux.cloud](https://uk.stux.cloud) | `robo1.servers.uk.stuxedo.net`<br>`tiny1.servers.uk.stuxedo.net`<br>`web1.servers.uk.stuxedo.net` (not monitored) |
-| Europe | `eu` | [https://eu.stux.cloud](https://eu.stux.cloud) | None yet |
-| Spain | `es` | [https://es.stux.cloud](https://es.stux.cloud) | `mixr1.servers.es.stuxedo.net` |
-| United States | `us` | [https://us.stux.cloud](https://us.stux.cloud) | `down1.servers.us.stuxedo.net` |
-| Canada | `ca` | [https://ca.stux.cloud](https://ca.stux.cloud) | `kitt1.servers.ca.stuxedo.net` |
-| Australia | `au` | [https://au.stux.cloud](https://au.stux.cloud) | None yet |
-| Japan | `jp` | [https://jp.stux.cloud](https://jp.stux.cloud) | None yet |
-| Singapore | `sg` | [https://sg.stux.cloud](https://sg.stux.cloud) | None yet |
-| India | `in` | [https://in.stux.cloud](https://in.stux.cloud) | None yet |
+| Region | Code | Part of | Website | Servers |
+|---|---|---|---|---|
+| **EMEA** | `emea` | — | [https://emea.stux.cloud](https://emea.stux.cloud) | 4 across Europe |
+| Europe | `eu` | EMEA | [https://eu.stux.cloud](https://eu.stux.cloud) | 4 across United Kingdom, Spain |
+| United Kingdom | `uk` | Europe | [https://uk.stux.cloud](https://uk.stux.cloud) | `robo1.servers.uk.stuxedo.net`<br>`tiny1.servers.uk.stuxedo.net`<br>`web1.servers.uk.stuxedo.net` (not monitored) |
+| Spain | `es` | Europe | [https://es.stux.cloud](https://es.stux.cloud) | `mixr1.servers.es.stuxedo.net` |
+| **AMER** | `amer` | — | [https://amer.stux.cloud](https://amer.stux.cloud) | 2 across United States, Canada |
+| United States | `us` | AMER | [https://us.stux.cloud](https://us.stux.cloud) | `down1.servers.us.stuxedo.net` |
+| Canada | `ca` | AMER | [https://ca.stux.cloud](https://ca.stux.cloud) | `kitt1.servers.ca.stuxedo.net` |
+| **APAC** | `apac` | — | [https://apac.stux.cloud](https://apac.stux.cloud) | None yet (covers Australia, Japan, Singapore, India) |
+| Australia | `au` | APAC | [https://au.stux.cloud](https://au.stux.cloud) | None yet |
+| Japan | `jp` | APAC | [https://jp.stux.cloud](https://jp.stux.cloud) | None yet |
+| Singapore | `sg` | APAC | [https://sg.stux.cloud](https://sg.stux.cloud) | None yet |
+| India | `in` | APAC | [https://in.stux.cloud](https://in.stux.cloud) | None yet |
 <!-- regions:end -->
 
 The regions and servers live in one file, [`assets/regions.js`](assets/regions.js). To add a region or a server, edit it there, then run `python scripts/build-readme.py` to refresh this table.
