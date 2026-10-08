@@ -34,7 +34,6 @@ Each Stux.Cloud region (for example [uk.stux.cloud](https://uk.stux.cloud)) has 
 | Japan | `jp` | [https://jp.stux.cloud](https://jp.stux.cloud) | None yet |
 | Singapore | `sg` | [https://sg.stux.cloud](https://sg.stux.cloud) | None yet |
 | India | `in` | [https://in.stux.cloud](https://in.stux.cloud) | None yet |
-| Eco | `eco` | [https://eco.stux.cloud](https://eco.stux.cloud) | None yet |
 <!-- regions:end -->
 
 The regions and servers live in one file, [`assets/regions.js`](assets/regions.js). To add a region or a server, edit it there, then run `python scripts/build-readme.py` to refresh this table.
