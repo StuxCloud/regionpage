@@ -27,7 +27,7 @@ def table(data) -> str:
     for r in data["regions"]:
         site = f"https://{r['code']}.{brand['domain']}"
         servers = "<br>".join(
-            f"`{s['name']}.servers.{r['code']}.{brand['domain']}`" + ("" if s["monitor"] else " (not monitored)")
+            f"`{s['name']}.servers.{r['code']}.{brand.get('serverDomain') or brand['domain']}`" + ("" if s["monitor"] else " (not monitored)")
             for s in r["servers"]
         ) or "None yet"
         rows.append(f"| {r['name']} | `{r['code']}` | [{site}]({site}) | {servers} |")

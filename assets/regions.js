@@ -10,7 +10,8 @@
  * brand.domain      the brand's region domain; a region lives at https://<code>.<domain>/
  * region.flag       a flag-icons code (https://flagicons.lipis.dev), or null for no flag
  * region.icon       used when flag is null: the icon drawn in the flag's place
- * server.name       the server's name; its hostname is <name>.servers.<code>.<domain>
+ * brand.serverDomain the domain the servers' hostnames use, when it differs from brand.domain
+ * server.name       the server's name; its hostname is <name>.servers.<code>.<serverDomain or domain>
  * server.monitor    the slug on the Stux.Group status page, or null when it isn't monitored
  *
  * Regions are listed in the order they appear on the page.
@@ -19,6 +20,7 @@ window.REGION_DATA = {
   "brand": {
     "name": "Stux.Cloud",
     "domain": "stux.cloud",
+    "serverDomain": "stuxedo.net",
     "statusUrl": "https://status.stux.group",
     "statusSummary": "https://raw.githubusercontent.com/StuxGroup/Status/main/data/summary.json"
   },

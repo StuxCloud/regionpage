@@ -2,6 +2,12 @@
 
 All notable changes to regionpage are documented here.
 
+## v3.1.0
+
+### Added
+
+- `brand.serverDomain` in `assets/regions.js`: the domain the servers' hostnames use, when it differs from the region domain. Stux.Cloud's servers now live under `stuxedo.net` (e.g. `robo1.servers.uk.stuxedo.net`), so the page and the README's region table show those hostnames, while the regions themselves stay at `https://<code>.stux.cloud/`
+
 ## v3.0.0
 
 ### Changed
