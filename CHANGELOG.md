@@ -2,6 +2,12 @@
 
 All notable changes to regionpage are documented here.
 
+## v3.4.3
+
+### Fixed
+
+- The footer's copyright line had a second, hidden copy of the © icon inside its screen-reader text; it's gone, leaving the visible icon and a plain "©" for screen readers. Nothing changes on screen
+
 ## v3.4.2
 
 ### Changed
