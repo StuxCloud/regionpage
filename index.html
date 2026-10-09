@@ -786,7 +786,7 @@
             var btn = document.getElementById('theme-toggle');
             var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             var stored = null;
-            try { stored = localStorage.getItem('stuxedo-theme'); } catch (e) { /* storage blocked */ }
+            try { stored = localStorage.getItem('stuxcloud-theme'); } catch (e) { /* storage blocked */ }
             var isDark = stored ? stored === 'dark' : prefersDark;
 
             function apply(dark) {
@@ -800,7 +800,7 @@
 
             btn.addEventListener('click', function () {
                 isDark = !isDark;
-                try { localStorage.setItem('stuxedo-theme', isDark ? 'dark' : 'light'); } catch (e) { /* storage blocked */ }
+                try { localStorage.setItem('stuxcloud-theme', isDark ? 'dark' : 'light'); } catch (e) { /* storage blocked */ }
                 apply(isDark);
             });
         })();

@@ -27,11 +27,11 @@ Each Stux.Cloud region (for example [uk.stux.cloud](https://uk.stux.cloud)) has 
 |---|---|---|---|---|
 | **EMEA** | `emea` | — | [https://emea.stux.cloud](https://emea.stux.cloud) | 4 across Europe |
 | Europe | `eu` | EMEA | [https://eu.stux.cloud](https://eu.stux.cloud) | 4 across United Kingdom, Spain |
-| United Kingdom | `uk` | Europe | [https://uk.stux.cloud](https://uk.stux.cloud) | `robo1.servers.uk.stuxedo.net`<br>`tiny1.servers.uk.stuxedo.net`<br>`web1.servers.uk.stuxedo.net` (not monitored) |
-| Spain | `es` | Europe | [https://es.stux.cloud](https://es.stux.cloud) | `mixr1.servers.es.stuxedo.net` |
+| United Kingdom | `uk` | Europe | [https://uk.stux.cloud](https://uk.stux.cloud) | `robo1.servers.uk.stux.cloud`<br>`tiny1.servers.uk.stux.cloud`<br>`web1.servers.uk.stux.cloud` (not monitored) |
+| Spain | `es` | Europe | [https://es.stux.cloud](https://es.stux.cloud) | `mixr1.servers.es.stux.cloud` |
 | **AMER** | `amer` | — | [https://amer.stux.cloud](https://amer.stux.cloud) | 2 across United States, Canada |
-| United States | `us` | AMER | [https://us.stux.cloud](https://us.stux.cloud) | `down1.servers.us.stuxedo.net` |
-| Canada | `ca` | AMER | [https://ca.stux.cloud](https://ca.stux.cloud) | `kitt1.servers.ca.stuxedo.net` |
+| United States | `us` | AMER | [https://us.stux.cloud](https://us.stux.cloud) | `down1.servers.us.stux.cloud` |
+| Canada | `ca` | AMER | [https://ca.stux.cloud](https://ca.stux.cloud) | `kitt1.servers.ca.stux.cloud` |
 | **APAC** | `apac` | — | [https://apac.stux.cloud](https://apac.stux.cloud) | None yet (covers Australia, Japan, Singapore, India) |
 | Australia | `au` | APAC | [https://au.stux.cloud](https://au.stux.cloud) | None yet |
 | Japan | `jp` | APAC | [https://jp.stux.cloud](https://jp.stux.cloud) | None yet |

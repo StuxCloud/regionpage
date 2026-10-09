@@ -2,6 +2,13 @@
 
 All notable changes to regionpage are documented here.
 
+## v3.4.1
+
+### Fixed
+
+- Server addresses show their Stux.Cloud names again (`robo1.servers.uk.stux.cloud`). v3.1.0 switched them to `stuxedo.net`, which doesn't belong on Stux.Cloud's page; the `brand.serverDomain` setting is no longer used here
+- The light/dark choice was saved in the browser under `stuxedo-theme`, a name left over from the Stuxedo page this one was built from; it's now `stuxcloud-theme` on every page, and the Cookies Policy names it correctly. A theme picked before this update resets to the system setting once
+
 ## v3.4.0
 
 ### Changed

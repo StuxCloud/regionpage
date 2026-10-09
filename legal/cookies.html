@@ -85,7 +85,7 @@
     <p>This page sets no cookies at all &mdash; not for tracking, not for advertising, not for analytics.</p>
 
     <h2>What it actually uses</h2>
-    <p>The only thing stored in your browser is a single <code>localStorage</code> value, <code>stuxedo-theme</code>, remembering whether you last chose light or dark mode. <code>localStorage</code> isn't a cookie &mdash; it isn't sent to any server with every request, and it never leaves your device.</p>
+    <p>The only thing stored in your browser is a single <code>localStorage</code> value, <code>stuxcloud-theme</code>, remembering whether you last chose light or dark mode. <code>localStorage</code> isn't a cookie &mdash; it isn't sent to any server with every request, and it never leaves your device.</p>
 
     <h2>Third-party cookies</h2>
     <p>There are no third-party scripts, ad networks, embeds, or trackers on this page, so nothing else can set a cookie here either. The only outside files are images, a flag icons stylesheet and a small public status file; none of them set cookies through this page.</p>
@@ -107,7 +107,7 @@
         var root = document.documentElement;
         var btn = document.getElementById('theme-toggle');
         var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var stored = localStorage.getItem('stuxedo-theme');
+        var stored = localStorage.getItem('stuxcloud-theme');
         var isDark = stored ? stored === 'dark' : prefersDark;
 
         function apply(dark) {
@@ -121,7 +121,7 @@
 
         btn.addEventListener('click', function () {
             isDark = !isDark;
-            localStorage.setItem('stuxedo-theme', isDark ? 'dark' : 'light');
+            localStorage.setItem('stuxcloud-theme', isDark ? 'dark' : 'light');
             apply(isDark);
         });
     })();

@@ -110,7 +110,7 @@
         var root = document.documentElement;
         var btn = document.getElementById('theme-toggle');
         var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var stored = localStorage.getItem('stuxedo-theme');
+        var stored = localStorage.getItem('stuxcloud-theme');
         var isDark = stored ? stored === 'dark' : prefersDark;
 
         function apply(dark) {
@@ -124,7 +124,7 @@
 
         btn.addEventListener('click', function () {
             isDark = !isDark;
-            localStorage.setItem('stuxedo-theme', isDark ? 'dark' : 'light');
+            localStorage.setItem('stuxcloud-theme', isDark ? 'dark' : 'light');
             apply(isDark);
         });
     })();
