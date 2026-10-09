@@ -2,6 +2,12 @@
 
 All notable changes to regionpage are documented here.
 
+## v3.4.2
+
+### Changed
+
+- The footer no longer says "Stux.Cloud is operated by Stux Group Ltd."; that belongs on the Imprint, which still says it. The copyright line names Stux.Cloud ("© year Stux.Cloud. All rights reserved.") instead of Stux.Group
+
 ## v3.4.1
 
 ### Fixed
