@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://global.media.stux.cloud/logo.png" height="100" alt="Stux.Cloud Logo">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://global.media.stux.cloud/logo-light.png"><source media="(prefers-color-scheme: light)" srcset="https://global.media.stux.cloud/logo-dark.png"><img src="https://global.media.stux.cloud/logo-dark.png" height="100" alt="Stux.Cloud Logo"></picture>
 </p>
 
 # Region Page
@@ -15,7 +15,7 @@ Each Stux.Cloud region (for example [uk.stux.cloud](https://uk.stux.cloud)) has 
 ## Features
 
 - 🌍 One page for every region: the region's name and flag, its servers, and a switcher linking to all regions
-- 🟢 Live server status (Online / Degraded / Offline) from [status.stux.group](https://status.stux.group)
+- 🟢 Live server status (Online / Degraded / Offline) from [status.stuxedo.net](https://status.stuxedo.net)
 - 🗺️ A "Stux.Cloud regions" index when no region is known
 - 🌗 Light and dark themes, responsive down to phone widths
 - 🚀 Deployed at [regionpage.stux.cloud](https://regionpage.stux.cloud)
@@ -61,7 +61,7 @@ The page also mirrors its title to the framing page with a `page-title` `postMes
 
 ## Live status
 
-Server badges are read from the Stux.Group status page's public `summary.json` (with a cache-busting query string). Servers with a `monitor` slug in `assets/regions.js` get an Online / Degraded / Offline badge; servers without one show "Not monitored". If the status can't be fetched, no badge is shown.
+Server badges are read from the Stuxedo status page's public `summary.json` (with a cache-busting query string). Servers with a `monitor` slug in `assets/regions.js` get an Online / Degraded / Offline badge; servers without one show "Not monitored". If the status can't be fetched, no badge is shown.
 
 ## Getting Started
 
@@ -103,7 +103,7 @@ Copyright (c) 2026 Stux.Group. This project is open source and available for use
 ---
 
 *Built & Maintained by <img src="https://github.com/StuxCloud.png" height="14" alt="Stux.Cloud" valign="middle"> [Stux.Cloud](https://github.com/StuxCloud), Hosted by <img src="https://github.com/Stuxedo.png" height="14" alt="Stuxedo" valign="middle"> [Stuxedo](https://stuxedo.com).    
-Stux.Cloud is a part of the <img src="https://global.media.stux.group/icon.png" height="14" alt="Stux.Group" valign="middle"> Stux.Group brand of businesses.*
+Stux.Cloud is a part of the <picture><source media="(prefers-color-scheme: dark)" srcset="https://global.media.stux.group/icon-light.png"><source media="(prefers-color-scheme: light)" srcset="https://global.media.stux.group/icon-dark.png"><img src="https://global.media.stux.group/icon-dark.png" height="14" alt="Stux.Group" valign="middle"></picture> Stux.Group brand of businesses.*
 
 ## Local preview
 
