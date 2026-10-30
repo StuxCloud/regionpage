@@ -25,10 +25,11 @@ Each Stux.Cloud region (for example [uk.stux.cloud](https://uk.stux.cloud)) has 
 <!-- regions:start -->
 | Region | Code | Part of | Website | Servers |
 |---|---|---|---|---|
-| **EMEA** | `emea` | — | [https://emea.stux.cloud](https://emea.stux.cloud) | 4 across Europe |
-| Europe | `eu` | EMEA | [https://eu.stux.cloud](https://eu.stux.cloud) | 4 across United Kingdom, Spain |
+| **EMEA** | `emea` | — | [https://emea.stux.cloud](https://emea.stux.cloud) | 5 across Europe |
+| Europe | `eu` | EMEA | [https://eu.stux.cloud](https://eu.stux.cloud) | 5 across United Kingdom, Spain, Finland |
 | United Kingdom | `uk` | Europe | [https://uk.stux.cloud](https://uk.stux.cloud) | `robo1.servers.uk.stux.cloud`<br>`tiny1.servers.uk.stux.cloud`<br>`web1.servers.uk.stux.cloud` (not monitored) |
 | Spain | `es` | Europe | [https://es.stux.cloud](https://es.stux.cloud) | `mixr1.servers.es.stux.cloud` |
+| Finland | `fi` | Europe | [https://fi.stux.cloud](https://fi.stux.cloud) | `mixr2.servers.fi.stux.cloud` |
 | **AMER** | `amer` | — | [https://amer.stux.cloud](https://amer.stux.cloud) | 2 across United States, Canada |
 | United States | `us` | AMER | [https://us.stux.cloud](https://us.stux.cloud) | `down1.servers.us.stux.cloud` |
 | Canada | `ca` | AMER | [https://ca.stux.cloud](https://ca.stux.cloud) | `kitt1.servers.ca.stux.cloud` |
@@ -41,7 +42,6 @@ Each Stux.Cloud region (for example [uk.stux.cloud](https://uk.stux.cloud)) has 
 
 The regions and servers live in one file, [`assets/regions.js`](assets/regions.js). To add a region or a server, edit it there, then run `python scripts/build-readme.py` to refresh this table.
 
-> **TODO:** confirm what the **Eco** region is and its proper name. For now it is described neutrally as "Stux.Cloud's Eco region", with a leaf icon in place of a flag.
 
 Flags come from the [flag-icons](https://flagicons.lipis.dev) stylesheet on cdnjs (no emoji flags: they don't render on Windows).
 
