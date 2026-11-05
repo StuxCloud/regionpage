@@ -25,11 +25,12 @@ Each Stux.Cloud region (for example [uk.stux.cloud](https://uk.stux.cloud)) has 
 <!-- regions:start -->
 | Region | Code | Part of | Website | Servers |
 |---|---|---|---|---|
-| **EMEA** | `emea` | — | [https://emea.stux.cloud](https://emea.stux.cloud) | 5 across Europe |
-| Europe | `eu` | EMEA | [https://eu.stux.cloud](https://eu.stux.cloud) | 5 across United Kingdom, Spain, Finland |
+| **EMEA** | `emea` | — | [https://emea.stux.cloud](https://emea.stux.cloud) | 6 across Europe |
+| Europe | `eu` | EMEA | [https://eu.stux.cloud](https://eu.stux.cloud) | 6 across United Kingdom, Spain, Finland, France |
 | United Kingdom | `uk` | Europe | [https://uk.stux.cloud](https://uk.stux.cloud) | `robo1.servers.uk.stux.cloud`<br>`tiny1.servers.uk.stux.cloud`<br>`web1.servers.uk.stux.cloud` (not monitored) |
 | Spain | `es` | Europe | [https://es.stux.cloud](https://es.stux.cloud) | `mixr1.servers.es.stux.cloud` |
 | Finland | `fi` | Europe | [https://fi.stux.cloud](https://fi.stux.cloud) | `mixr2.servers.fi.stux.cloud` |
+| France | `fr` | Europe | [https://fr.stux.cloud](https://fr.stux.cloud) | `soci1.servers.fr.stux.cloud` |
 | **AMER** | `amer` | — | [https://amer.stux.cloud](https://amer.stux.cloud) | 2 across United States, Canada |
 | United States | `us` | AMER | [https://us.stux.cloud](https://us.stux.cloud) | `down1.servers.us.stux.cloud` |
 | Canada | `ca` | AMER | [https://ca.stux.cloud](https://ca.stux.cloud) | `kitt1.servers.ca.stux.cloud` |
