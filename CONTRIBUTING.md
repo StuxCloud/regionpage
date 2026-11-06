@@ -31,7 +31,7 @@ Thank you for your interest in contributing! This repository is a small, static 
 - Match the existing CSS variable naming and light/dark theme structure.
 - General contact uses `hello@stux.cloud`; legal-page contact uses `legal@stux.cloud`.
 - Test both the light and dark themes, a region with servers (`?region=uk`), a region without (`?region=au`), the index (no `?region`), and the embedded (iframe) code path through `wrapper/index.html`, before submitting.
-- `wrapper/index.html` is uploaded unchanged to every region's website; don't add per-region settings to it.
+- `wrapper/index.html` is the same on every region's website, so don't add per-region settings to it. Merging a change to `main` deploys it to every region server (the **Deploy wrapper** workflow).
 - The sitemap (`sitemap.xml`, `sitemap/index.html`, `robots.txt`) is generated: after adding or removing a page, edit the `PAGES` list in `scripts/build-sitemap.py` and run `python scripts/build-sitemap.py`, then commit the result
 
 ## Questions

@@ -61,6 +61,8 @@ The page also mirrors its title to the framing page with a `page-title` `postMes
 
 **The same file is uploaded, unchanged, to every region's website** (uk.stux.cloud, ca.stux.cloud and so on). The template does the rest, because it reads the region from the host of the site framing it. The wrapper is a deployment artefact: it is not part of the Pages site or the sitemap.
 
+**It deploys itself.** Once CI passes on a push to `main`, the **Deploy wrapper** workflow (`.github/workflows/deploy-wrapper.yml`) copies `wrapper/` to every region server with rsync, then checks each region's website serves it. It deploys only the commit CI tested, and only while that's still the tip of `main`. Each server has its own deploy key (the `DEPLOY_KEY_<SERVER>` secrets), which can only write into `/var/www/region-stuxcloud/` on that server. A new region server needs its key and a line in the workflow's matrix.
+
 ## Live status
 
 Server badges are read from the Stuxedo status page's public `summary.json` (with a cache-busting query string). Servers with a `monitor` slug in `assets/regions.js` get an Online / Degraded / Offline badge; servers without one show "Not monitored". If the status can't be fetched, no badge is shown.

@@ -6,6 +6,10 @@ Since v26.10.23 this project uses [Date Versioning](https://datevers.ing) (`YY.M
 
 ## v26.11.06-2
 
+### Added
+
+- **The wrapper deploys itself.** The new **Deploy wrapper** workflow copies `wrapper/index.html` to every region server (uk, es, fi, fr, us, ca) once CI passes on a push to `main`, then checks each region's website serves it. It deploys only the commit CI tested, and only while that is still the tip of `main`. Each server has its own deploy key, restricted on the server to writing into the Stux.Cloud wrapper's folder, and its host key is pinned. Before, the wrapper was only copied by hand when a region was set up
+
 ### Changed
 
 - The README's **Local preview** section moved up from below the footer, and the footer's Stux.Cloud and Stuxedo icons follow GitHub's light or dark theme (`icon-light`/`icon-dark` from each brand's media CDN) instead of using their GitHub avatars
