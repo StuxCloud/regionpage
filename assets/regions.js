@@ -24,7 +24,7 @@ window.REGION_DATA = {
   "brand": {
     "name": "Stux.Cloud",
     "domain": "stux.cloud",
-    "statusUrl": "https://status.stuxedo.net",
+    "statusUrl": "https://status.stuxedo.com",
     "statusSummary": "https://raw.githubusercontent.com/Stuxedo/Status/main/data/summary.json"
   },
   "regions": [

@@ -15,7 +15,7 @@ Each Stux.Cloud region (for example [uk.stux.cloud](https://uk.stux.cloud)) has 
 ## Features
 
 - 🌍 One page for every region: the region's name and flag, its servers, and a switcher linking to all regions
-- 🟢 Live server status (Online / Degraded / Offline) from [status.stuxedo.net](https://status.stuxedo.net)
+- 🟢 Live server status (Online / Degraded / Offline) from [status.stuxedo.com](https://status.stuxedo.com)
 - 🗺️ A "Stux.Cloud regions" index when no region is known
 - 🌗 Light and dark themes, responsive down to phone widths
 - 🚀 Deployed at [regionpage.stux.cloud](https://regionpage.stux.cloud)
