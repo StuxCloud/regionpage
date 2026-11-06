@@ -94,6 +94,10 @@ This repository always holds the current Stux.Cloud design (v3, single teal `#07
 
 - [regionpage-v2](https://github.com/StuxCloud/regionpage-v2): the two-tone green design, live at [regionpage-v2.stux.cloud](https://regionpage-v2.stux.cloud/)
 
+## Local preview
+
+Run `./dev-server.sh` (or `dev-server.bat`, add a port as the last argument) to serve the site at `http://127.0.0.1:8000` the way GitHub Pages does, with the dev-mode banner on. Add `--no-dev-mode` to see it exactly as production does, or `?banner=soon,maintenance,site` to preview the other banner types. It uses PHP 7.4's built-in server (set `PHP_BIN` to pick another PHP).
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved, and [CHANGELOG.md](CHANGELOG.md) for release history.
@@ -108,9 +112,5 @@ Copyright (c) 2026 Stux.Group. This project is open source and available for use
 
 ---
 
-*Built & Maintained by <img src="https://github.com/StuxCloud.png" height="14" alt="Stux.Cloud" valign="middle"> [Stux.Cloud](https://github.com/StuxCloud), Hosted by <img src="https://github.com/Stuxedo.png" height="14" alt="Stuxedo" valign="middle"> [Stuxedo](https://stuxedo.com).    
+*Built & Maintained by <picture><source media="(prefers-color-scheme: dark)" srcset="https://global.media.stux.cloud/icon-light.png"><source media="(prefers-color-scheme: light)" srcset="https://global.media.stux.cloud/icon-dark.png"><img src="https://global.media.stux.cloud/icon-dark.png" height="14" alt="Stux.Cloud" valign="middle"></picture> [Stux.Cloud](https://github.com/StuxCloud), Hosted by <picture><source media="(prefers-color-scheme: dark)" srcset="https://global.media.stuxedo.com/icon-light.png"><source media="(prefers-color-scheme: light)" srcset="https://global.media.stuxedo.com/icon-dark.png"><img src="https://global.media.stuxedo.com/icon-dark.png" height="14" alt="Stuxedo" valign="middle"></picture> [Stuxedo](https://stuxedo.com).  
 Stux.Cloud is a part of the <picture><source media="(prefers-color-scheme: dark)" srcset="https://global.media.stux.group/icon-light.png"><source media="(prefers-color-scheme: light)" srcset="https://global.media.stux.group/icon-dark.png"><img src="https://global.media.stux.group/icon-dark.png" height="14" alt="Stux.Group" valign="middle"></picture> Stux.Group brand of businesses.*
-
-## Local preview
-
-Run `./dev-server.sh` (or `dev-server.bat`, add a port as the last argument) to serve the site at `http://127.0.0.1:8000` the way GitHub Pages does, with the dev-mode banner on. Add `--no-dev-mode` to see it exactly as production does, or `?banner=soon,maintenance,site` to preview the other banner types. It uses PHP 7.4's built-in server (set `PHP_BIN` to pick another PHP).

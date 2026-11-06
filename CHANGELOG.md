@@ -4,6 +4,13 @@ All notable changes to regionpage are documented here.
 
 Since v26.10.23 this project uses [Date Versioning](https://datevers.ing) (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used Semantic Versioning.
 
+## v26.11.06-2
+
+### Changed
+
+- The README's **Local preview** section moved up from below the footer, and the footer's Stux.Cloud and Stuxedo icons follow GitHub's light or dark theme (`icon-light`/`icon-dark` from each brand's media CDN) instead of using their GitHub avatars
+- `CONTRIBUTING.md` gains the Stux.Cloud logo, and its closing note moved to the end
+
 ## v26.11.06-1
 
 ### Changed
