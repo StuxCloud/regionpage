@@ -4,6 +4,12 @@ All notable changes to regionpage are documented here.
 
 Since v26.10.23 this project uses [Date Versioning](https://datevers.ing) (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used Semantic Versioning.
 
+## v26.11.06
+
+### Added
+
+- A **Status** link in the footer, to [Stux.Cloud Status](https://status.stux.cloud), the new status page for Stux.Cloud's websites and pages. Server status still comes from Stuxedo Status.
+
 ## v26.11.05
 
 ### Added
