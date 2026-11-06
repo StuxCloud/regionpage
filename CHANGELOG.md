@@ -4,6 +4,12 @@ All notable changes to regionpage are documented here.
 
 Since v26.10.23 this project uses [Date Versioning](https://datevers.ing) (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used Semantic Versioning.
 
+## v26.11.06-1
+
+### Changed
+
+- Every link to Stuxedo's status now goes to [status.stuxedo.com](https://status.stuxedo.com), Stuxedo's main status page (Stuxedo Status), instead of straight to Stuxedo Server Status (status.stuxedo.net). That covers the "Live status from" note under the server list, the server badges' "Live from" tooltip, the Discord embeds' **Server status** buttons and the README. The live server status is still read from Stuxedo Server Status's data, as before.
+
 ## v26.11.06
 
 ### Added
