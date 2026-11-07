@@ -3,7 +3,7 @@
 Every server has an A record <name>.servers.<cc>.stuxedo.net in the stuxedo.net zone. A server that has a
 record but isn't in assets/regions.js is added to its region, with its status from the <name> monitor (the
 Status repo's own sync adds that monitor), then the README table and sitemap are rebuilt, and a release is
-written: CHANGELOG.md entry and VERSION.md. The workflow commits, tags and deploys it.
+written: CHANGELOG.md entry and VERSION.md. The workflow commits and tags it on test and opens a pull request into main.
 
 Only additions are automatic. A server in a country that isn't a region yet fails the run (a region needs a
 name, flag and parent: add it with the deploy-stuxedo-server skill), and a listed server with no record is only
