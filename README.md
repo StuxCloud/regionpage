@@ -61,6 +61,8 @@ The page also mirrors its title to the framing page with a `page-title` `postMes
 
 **The same file is uploaded, unchanged, to every region's website** (uk.stux.cloud, ca.stux.cloud and so on). The template does the rest, because it reads the region from the host of the site framing it. The wrapper is a deployment artefact: it is not part of the Pages site or the sitemap.
 
+**It deploys itself.** Once CI passes on a push to `main`, the **Deploy wrapper** workflow (`.github/workflows/deploy-wrapper.yml`) copies `wrapper/` to every region server with rsync, then checks each region's website serves it. It deploys only the commit CI tested, and only while that's still the tip of `main`. Each server has its own deploy key (the `DEPLOY_KEY_<SERVER>` secrets), which can only write into `/var/www/region-stuxcloud/` on that server. A new region server needs its key and a line in the workflow's matrix.
+
 ## Live status
 
 Server badges are read from the Stuxedo status page's public `summary.json` (with a cache-busting query string). Servers with a `monitor` slug in `assets/regions.js` get an Online / Degraded / Offline badge; servers without one show "Not monitored". If the status can't be fetched, no badge is shown.
@@ -94,6 +96,10 @@ This repository always holds the current Stux.Cloud design (v3, single teal `#07
 
 - [regionpage-v2](https://github.com/StuxCloud/regionpage-v2): the two-tone green design, live at [regionpage-v2.stux.cloud](https://regionpage-v2.stux.cloud/)
 
+## Local preview
+
+Run `./dev-server.sh` (or `dev-server.bat`, add a port as the last argument) to serve the site at `http://127.0.0.1:8000` the way GitHub Pages does, with the dev-mode banner on. Add `--no-dev-mode` to see it exactly as production does, or `?banner=soon,maintenance,site` to preview the other banner types. It uses PHP 7.4's built-in server (set `PHP_BIN` to pick another PHP).
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved, and [CHANGELOG.md](CHANGELOG.md) for release history.
@@ -102,15 +108,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved, and [CHANGELOG.m
 
 This project uses [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD` (for example `26.10.23`), with `-1`, `-2`… for later releases the same day. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
+Work happens on `test` (or a branch off it), never on `main`. Changes reach `main` only through a pull request from `test`; the release commit and tag are made on `test` and go live when the pull request is merged.
+
 ## License
 
 Copyright (c) 2026 Stux.Group. This project is open source and available for use and modification.
 
 ---
 
-*Built & Maintained by <img src="https://github.com/StuxCloud.png" height="14" alt="Stux.Cloud" valign="middle"> [Stux.Cloud](https://github.com/StuxCloud), Hosted by <img src="https://github.com/Stuxedo.png" height="14" alt="Stuxedo" valign="middle"> [Stuxedo](https://stuxedo.com).    
+*Built & Maintained by <picture><source media="(prefers-color-scheme: dark)" srcset="https://global.media.stux.cloud/icon-light.png"><source media="(prefers-color-scheme: light)" srcset="https://global.media.stux.cloud/icon-dark.png"><img src="https://global.media.stux.cloud/icon-dark.png" height="14" alt="Stux.Cloud" valign="middle"></picture> [Stux.Cloud](https://github.com/StuxCloud), Hosted by <picture><source media="(prefers-color-scheme: dark)" srcset="https://global.media.stuxedo.com/icon-light.png"><source media="(prefers-color-scheme: light)" srcset="https://global.media.stuxedo.com/icon-dark.png"><img src="https://global.media.stuxedo.com/icon-dark.png" height="14" alt="Stuxedo" valign="middle"></picture> [Stuxedo](https://stuxedo.com).  
 Stux.Cloud is a part of the <picture><source media="(prefers-color-scheme: dark)" srcset="https://global.media.stux.group/icon-light.png"><source media="(prefers-color-scheme: light)" srcset="https://global.media.stux.group/icon-dark.png"><img src="https://global.media.stux.group/icon-dark.png" height="14" alt="Stux.Group" valign="middle"></picture> Stux.Group brand of businesses.*
-
-## Local preview
-
-Run `./dev-server.sh` (or `dev-server.bat`, add a port as the last argument) to serve the site at `http://127.0.0.1:8000` the way GitHub Pages does, with the dev-mode banner on. Add `--no-dev-mode` to see it exactly as production does, or `?banner=soon,maintenance,site` to preview the other banner types. It uses PHP 7.4's built-in server (set `PHP_BIN` to pick another PHP).
