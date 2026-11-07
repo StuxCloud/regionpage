@@ -4,6 +4,17 @@ All notable changes to regionpage are documented here.
 
 Since v26.10.23 this project uses [Date Versioning](https://datevers.ing) (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used Semantic Versioning.
 
+## v26.11.07
+
+### Added
+
+- `LICENSE`, stating the repository is not licensed for reuse or redistribution
+
+### Changed
+
+- **Servers sync** no longer pushes to `main`. When it finds a new server, it makes the release commit and tag on `test`, starts CI there, and opens a pull request from `test` into `main` (or adds to the one already open), so the new server goes live only when that's reviewed and merged, like any other change. CI can now also be started by hand (`workflow_dispatch`)
+- The licence is now **All rights reserved**: the README's License section no longer says the project is open source and available for use and modification
+
 ## v26.11.06-2
 
 ### Added
