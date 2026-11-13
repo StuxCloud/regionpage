@@ -4,6 +4,12 @@ All notable changes to regionpage are documented here.
 
 Since v26.10.23 this project uses [Date Versioning](https://datevers.ing) (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used Semantic Versioning.
 
+## v26.11.13
+
+### Changed
+
+- Stux Group Ltd's registered office is now **124 City Road, London, EC1V 2NX, England** on the Imprint page (`legal/imprint.html`), replacing the old Mildenhall address. The company number (13160574) and "registered in England and Wales" are unchanged
+
 ## v26.11.07
 
 ### Added
