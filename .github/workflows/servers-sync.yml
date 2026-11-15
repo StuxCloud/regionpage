@@ -1,6 +1,6 @@
 # Adds new Stuxedo servers to the page on its own, daily: reads the *.servers.<cc>.stuxedo.net records from
 # Cloudflare (scripts/sync-servers.py), and when there's a new one, makes the release on test and opens a pull
-# request from test into main. Like any other change, it goes live only when that pull request is merged.
+# request from test into staging. Like any other change, it goes live only once it has gone on from staging into main.
 # Needs the CLOUDFLARE_DNS_TOKEN secret: a Cloudflare API token with Zone > DNS > Read on stuxedo.net only.
 #
 # A push or pull request made with this workflow's token doesn't start other workflows, so it starts CI on test
@@ -16,7 +16,7 @@ on:
 permissions:
   contents: write        # commit and tag the release on test
   actions: write         # start CI on test (a push made with this workflow's token doesn't)
-  pull-requests: write   # open the release's pull request into main
+  pull-requests: write   # open the release's pull request into staging
 
 concurrency:
   group: servers-sync
@@ -57,11 +57,11 @@ jobs:
           git tag -a "v$VERSION" -m "Release v$VERSION"
           git push origin HEAD:test "v$VERSION"
           gh workflow run ci.yml --ref test
-          open="$(gh pr list --base main --head test --state open --json url -q '.[0].url')"
+          open="$(gh pr list --base staging --head test --state open --json url -q '.[0].url')"
           if [ -n "$open" ]; then
             echo "::notice::v$VERSION is on test and joins the open pull request $open."
-          elif url="$(gh pr create --base main --head test --title "Release v$VERSION: new servers from DNS" --body "The daily Servers sync found new servers in DNS and added them. See CHANGELOG.md for v$VERSION. Merging this deploys the page.")"; then
+          elif url="$(gh pr create --base staging --head test --title "Release v$VERSION: new servers from DNS" --body "The daily Servers sync found new servers in DNS and added them. See CHANGELOG.md for v$VERSION. Once it's merged, open a pull request from staging into main; merging that deploys the page.")"; then
             echo "::notice::Opened $url for v$VERSION."
           else
-            echo "::warning::v$VERSION is on test, but this workflow can't open pull requests here. Open it by hand: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/compare/main...test"
+            echo "::warning::v$VERSION is on test, but this workflow can't open pull requests here. Open it by hand: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/compare/staging...test"
           fi
