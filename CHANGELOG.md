@@ -4,6 +4,12 @@ All notable changes to regionpage are documented here.
 
 Since v26.10.23 this project uses [Date Versioning](https://datevers.ing) (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used Semantic Versioning.
 
+## v26.11.15
+
+### Added
+
+- **`--lan`** for `dev-server.sh` and `dev-server.bat`: the local server listens on every interface (`0.0.0.0`) instead of only `127.0.0.1`, so a phone or another device on the same network can open it, and it prints the address to open for each of this machine's IPv4 addresses (usually the `192.168.x.x` one). Without `--lan` it stays on `127.0.0.1` only. The README and `CONTRIBUTING.md` describe it
+
 ## v26.11.13-1
 
 ### Changed

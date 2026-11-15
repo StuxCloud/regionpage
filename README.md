@@ -77,6 +77,7 @@ Server badges are read from the Stuxedo status page's public `summary.json` (wit
 2. Run it locally:
    ```bash
    ./dev-server.sh        # or dev-server.bat on Windows
+   ./dev-server.sh --lan  # also open it from a phone or another device on your network
    ```
    Then open `http://127.0.0.1:8000/?region=uk` (or any region code, or no `?region` for the index).
 
@@ -98,7 +99,7 @@ This repository always holds the current Stux.Cloud design (v3, single teal `#07
 
 ## Local preview
 
-Run `./dev-server.sh` (or `dev-server.bat`, add a port as the last argument) to serve the site at `http://127.0.0.1:8000` the way GitHub Pages does, with the dev-mode banner on. Add `--no-dev-mode` to see it exactly as production does, or `?banner=soon,maintenance,site` to preview the other banner types. It uses PHP 7.4's built-in server (set `PHP_BIN` to pick another PHP).
+Run `./dev-server.sh` (or `dev-server.bat`, add a port as the last argument) to serve the site at `http://127.0.0.1:8000` the way GitHub Pages does, with the dev-mode banner on. Add `--no-dev-mode` to see it exactly as production does, `--lan` to open it from a phone or another device on your network (it prints the addresses to open), or `?banner=soon,maintenance,site` to preview the other banner types. It uses PHP 7.4's built-in server (set `PHP_BIN` to pick another PHP).
 
 ## Contributing
 
