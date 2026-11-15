@@ -6,7 +6,16 @@
 set -e
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$DIR"
 VERSION="$(tr -d '[:space:]' < "$DIR/VERSION.md")"
+
+# Releases are made on test (or a branch off it). staging and main only change through
+# pull requests: test -> staging -> main.
+BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "staging" ]; then
+    echo "You're on $BRANCH. Releases are made on test, then go test -> staging -> main through pull requests: git switch test" >&2
+    exit 1
+fi
 
 # Date Versioning (https://datevers.ing): the UTC release date as YY.MM.DD, plus -1, -2... for later releases that day
 DATE="${VERSION%%-*}"
@@ -42,4 +51,6 @@ else
     echo "Tagged v${VERSION}."
 fi
 
-echo "Push with: git push origin test --tags"
+echo "Push with: git push origin $BRANCH --tags"
+echo "Then open a pull request into staging: gh pr create --base staging --head $BRANCH"
+echo "Once staging is checked, open one from staging into main: gh pr create --base main --head staging"
