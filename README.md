@@ -43,7 +43,7 @@ Each Stux.Cloud region (for example [uk.stux.cloud](https://uk.stux.cloud)) has 
 
 The regions and servers live in one file, [`assets/regions.js`](assets/regions.js). To add a region or a server, edit it there, then run `python scripts/build-readme.py` to refresh this table.
 
-New servers are also added on their own: the daily **Servers sync** workflow (`.github/workflows/servers-sync.yml`, `scripts/sync-servers.py`) reads the `*.servers.<cc>.stuxedo.net` records from Cloudflare, adds any server that isn't listed to its region, makes the release on `test` and opens a pull request into `main`, which goes live once it's merged. A server in a country that isn't a region yet fails the run, as a region needs a name, flag and parent; a listed server with no record is only warned about. It needs the `CLOUDFLARE_DNS_TOKEN` secret, a Cloudflare API token with Zone → DNS → Read on stuxedo.net only; without it, the workflow does nothing.
+New servers are also added on their own: the daily **Servers sync** workflow (`.github/workflows/servers-sync.yml`, `scripts/sync-servers.py`) reads the `*.servers.<cc>.stuxedo.net` records from Cloudflare, adds any server that isn't listed to its region, makes the release on `test` and opens a pull request into `staging`; it goes live once it has gone on from `staging` into `main`. A server in a country that isn't a region yet fails the run, as a region needs a name, flag and parent; a listed server with no record is only warned about. It needs the `CLOUDFLARE_DNS_TOKEN` secret, a Cloudflare API token with Zone → DNS → Read on stuxedo.net only; without it, the workflow does nothing.
 
 Flags come from the [flag-icons](https://flagicons.lipis.dev) stylesheet on cdnjs (no emoji flags: they don't render on Windows).
 
@@ -109,7 +109,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved, and [CHANGELOG.m
 
 This project uses [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD` (for example `26.10.23`), with `-1`, `-2`… for later releases the same day. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
-Work happens on `test` (or a branch off it), never on `main`. Changes reach `main` only through a pull request from `test`; the release commit and tag are made on `test` and go live when the pull request is merged.
+Work happens on `test` (or a branch off it). Changes go `test` → `staging` → `main`, each step through a pull request; the release commit and tag are made on `test` and go live when the pull request from `staging` into `main` is merged. See [CONTRIBUTING.md](CONTRIBUTING.md#branches-and-going-live).
 
 ## License
 
