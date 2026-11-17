@@ -27,7 +27,7 @@ Each Stux.Cloud region (for example [uk.stux.cloud](https://uk.stux.cloud)) has 
 |---|---|---|---|---|
 | **EMEA** | `emea` | — | [https://emea.stux.cloud](https://emea.stux.cloud) | 7 across Europe |
 | Europe | `eu` | EMEA | [https://eu.stux.cloud](https://eu.stux.cloud) | 7 across United Kingdom, Spain, Finland, France, Germany |
-| United Kingdom | `uk` | Europe | [https://uk.stux.cloud](https://uk.stux.cloud) | `robo1.servers.uk.stux.cloud`<br>`tiny1.servers.uk.stux.cloud`<br>`web1.servers.uk.stux.cloud` (not monitored) |
+| United Kingdom | `uk` | Europe | [https://uk.stux.cloud](https://uk.stux.cloud) | `robo1.servers.uk.stux.cloud`<br>`tiny1.servers.uk.stux.cloud`<br>`web1.servers.uk.stux.cloud` |
 | Spain | `es` | Europe | [https://es.stux.cloud](https://es.stux.cloud) | `mixr1.servers.es.stux.cloud` |
 | Finland | `fi` | Europe | [https://fi.stux.cloud](https://fi.stux.cloud) | `mixr2.servers.fi.stux.cloud` |
 | France | `fr` | Europe | [https://fr.stux.cloud](https://fr.stux.cloud) | `soci1.servers.fr.stux.cloud` |
