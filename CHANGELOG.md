@@ -4,6 +4,13 @@ All notable changes to regionpage are documented here.
 
 Since v26.10.23 this project uses [Date Versioning](https://datevers.ing) (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used Semantic Versioning.
 
+## v26.11.17
+
+### Added
+
+- **Germany (`de`) is a new region, served by RUNN1.** It sits under Europe with the German flag, and lists RUNN1 with its live status from the `runn1` monitor. The README table and sitemap include it. Its website is [de.stux.cloud](https://de.stux.cloud/).
+- **The Deploy wrapper workflow also copies the wrapper to RUNN1** for `de.stux.cloud`, with its own deploy key (`DEPLOY_KEY_RUNN1`) that can only write into the region folder.
+
 ## v26.11.15-1
 
 ### Added
